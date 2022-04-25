@@ -1,0 +1,32 @@
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\Personnel Tracking App.exe.config
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\Personnel Tracking App.exe
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\Personnel Tracking App.pdb
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\en\Personnel Tracking App.resources.dll
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\BLL.dll
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\DAL.dll
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\BLL.pdb
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\DAL.pdb
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel Tracking App.csproj.AssemblyReference.cache
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmDepartment.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmDepartmentList.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmEmployee.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmEmployeeList.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmLogin.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmMain.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmPermission.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmPermissionList.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmPosition.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmPositionList.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmSalary.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmSalaryList.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmTask.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmTaskList.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.Properties.Resources.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel_Tracking_App.FrmLogin.en.resources
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel Tracking App.csproj.GenerateResource.cache
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel Tracking App.csproj.CoreCompileInputs.cache
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\en\Personnel Tracking App.resources.dll
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel Tracking App.csproj.CopyComplete
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel Tracking App.exe
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\obj\Debug\Personnel Tracking App.pdb
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\bin\Debug\DAL.dll.config

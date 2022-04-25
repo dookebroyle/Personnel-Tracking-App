@@ -1,0 +1,7 @@
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\DAL\bin\Debug\DAL.dll
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\DAL\bin\Debug\DAL.pdb
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\DAL\obj\Debug\DAL.dll
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\DAL\obj\Debug\DAL.pdb
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\DAL\bin\Debug\DAL.dll.config
+C:\Users\doyle\Documents\C# Udemy Course\Personnel Tracking App\Personnel Tracking App\Personnel Tracking App\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
