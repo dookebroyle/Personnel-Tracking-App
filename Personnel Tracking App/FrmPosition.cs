@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DAL;
+using DAL.DTO;
 
 
 
@@ -21,12 +22,17 @@ namespace Personnel_Tracking_App
             InitializeComponent();
         }
 
+        List<DEPARTMENT> departmentList = new List<DEPARTMENT>();
+        public PositionDTO detail = new PositionDTO();
+        public bool IsUpdate = false;
+
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        List<DEPARTMENT> departmentList = new List<DEPARTMENT>();
+        
 
         private void FrmPosition_Load(object sender, EventArgs e)
         {
@@ -35,6 +41,11 @@ namespace Personnel_Tracking_App
             cmbDepartment.DisplayMember = "DepartmentName";
             cmbDepartment.ValueMember = "ID";
             cmbDepartment.SelectedIndex = -1;
+            if(IsUpdate)
+            {
+                txtPosition.Text = detail.PositionName;
+                cmbDepartment.SelectedValue = detail.DepartmentID;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -49,13 +60,29 @@ namespace Personnel_Tracking_App
             }
             else
             {
-                POSITION position = new POSITION();
-                position.PositionName = txtPosition.Text;
-                position.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
-                BLL.PositionBLL.AddPosition(position);
-                MessageBox.Show("Position was added.");
-                txtPosition.Clear();
-                cmbDepartment.SelectedIndex = -1;
+                if (!IsUpdate)
+                {
+                    POSITION position = new POSITION();
+                    position.PositionName = txtPosition.Text;
+                    position.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
+                    BLL.PositionBLL.AddPosition(position);
+                    MessageBox.Show("Position was added.");
+                    txtPosition.Clear();
+                    cmbDepartment.SelectedIndex = -1;
+                }
+                else
+                {
+                    POSITION position = new POSITION();
+                    position.ID = detail.ID;
+                    position.PositionName = txtPosition.Text;
+                    position.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
+                    bool control = false;
+                    if (Convert.ToInt32(cmbDepartment.SelectedValue) != detail.OldDepartmentID)
+                        control = true;
+                    PositionBLL.UpdatePosition(position, control);
+                    MessageBox.Show("Position has been updated.");
+                    this.Close();
+                }
             }
         }
 

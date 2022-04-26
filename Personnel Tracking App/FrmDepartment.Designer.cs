@@ -89,6 +89,7 @@ namespace Personnel_Tracking_App
             this.Controls.Add(this.lblDepartment);
             this.Name = "FrmDepartment";
             this.Text = "Department";
+            this.Load += new System.EventHandler(this.FrmDepartment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

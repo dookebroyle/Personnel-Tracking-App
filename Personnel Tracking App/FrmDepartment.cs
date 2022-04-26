@@ -19,6 +19,9 @@ namespace Personnel_Tracking_App
             InitializeComponent();
         }
 
+        public bool IsUpdate = false;
+        public DEPARTMENT detail = new DEPARTMENT();
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -33,11 +36,33 @@ namespace Personnel_Tracking_App
             else
             {
                 DEPARTMENT department = new DEPARTMENT();
-                department.DepartmentName = txtDepartment.Text;
-                BLL.DepartmentBLL.AddDepartment(department);
-                MessageBox.Show("Department has been added successfully.");
-                txtDepartment.Clear();
+                if (!IsUpdate)
+                {
+                    department.DepartmentName = txtDepartment.Text;
+                    BLL.DepartmentBLL.AddDepartment(department);
+                    MessageBox.Show("Department has been added successfully.");
+                    txtDepartment.Clear();
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButtons.YesNo);
+                    if(DialogResult.Yes == result)
+                    {
+                        department.ID = detail.ID;
+                        department.DepartmentName = txtDepartment.Text;
+                        DepartmentBLL.UpdateDepartment(department);
+                        MessageBox.Show("Department was updated");
+                        this.Close();
+                    }
+                }
             }
+
+        }
+
+        private void FrmDepartment_Load(object sender, EventArgs e)
+        {
+            if (IsUpdate)
+                txtDepartment.Text = detail.DepartmentName;
 
         }
     }

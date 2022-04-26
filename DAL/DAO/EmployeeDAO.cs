@@ -71,6 +71,22 @@ namespace DAL.DAO
 			return employeeList;
 		}
 
+        public static void DeleteEmployee(int employeeID)
+        {
+            try
+            {
+				EMPLOYEE e = db.EMPLOYEEs.First(x => x.ID == employeeID);
+				db.EMPLOYEEs.DeleteOnSubmit(e);
+				db.SubmitChanges();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public static void UpdateEmployee(EMPLOYEE employee)
         {
 			try
@@ -102,6 +118,24 @@ namespace DAL.DAO
             {
 				EMPLOYEE employee = db.EMPLOYEEs.First(x => x.ID == employeeID);
 				employee.Salary = amount;
+				db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+		public static void UpdateEmployee(POSITION position)
+        {
+            try
+            {
+				List<EMPLOYEE> list = db.EMPLOYEEs.Where(x => x.PositionID == position.ID).ToList();
+				foreach(var item in list)
+                {
+					item.DepartmentID = position.DepartmentID;
+                }
 				db.SubmitChanges();
             }
             catch (Exception ex)

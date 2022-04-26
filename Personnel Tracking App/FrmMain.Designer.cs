@@ -79,7 +79,7 @@ namespace Personnel_Tracking_App
             // 
             this.btnPermission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnPermission.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnPermission.Location = new System.Drawing.Point(101, 166);
+            this.btnPermission.Location = new System.Drawing.Point(264, 166);
             this.btnPermission.Name = "btnPermission";
             this.btnPermission.Size = new System.Drawing.Size(124, 116);
             this.btnPermission.TabIndex = 8;
@@ -91,7 +91,7 @@ namespace Personnel_Tracking_App
             // 
             this.btnDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnDepartment.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDepartment.Location = new System.Drawing.Point(264, 166);
+            this.btnDepartment.Location = new System.Drawing.Point(101, 166);
             this.btnDepartment.Name = "btnDepartment";
             this.btnDepartment.Size = new System.Drawing.Size(124, 116);
             this.btnDepartment.TabIndex = 9;
@@ -150,6 +150,7 @@ namespace Personnel_Tracking_App
             this.Controls.Add(this.btnEmployee);
             this.Name = "FrmMain";
             this.Text = "Main Menu";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
 
         }

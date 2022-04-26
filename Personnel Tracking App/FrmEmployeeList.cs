@@ -159,6 +159,16 @@ namespace Personnel_Tracking_App
             detail.Salary = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
         }
 
-  
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                EmployeeBLL.DeleteEmployee(detail.EmployeeID);
+                MessageBox.Show("Employee has been deleted.");
+                FillAllData();
+                CleanFilters();
+            }
+        }
     }
     }

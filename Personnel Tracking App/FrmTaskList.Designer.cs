@@ -37,6 +37,18 @@ namespace Personnel_Tracking_App
             this.btnApprove = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.txtUserNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panelForAdmin = new System.Windows.Forms.Panel();
             this.dtFinish = new System.Windows.Forms.DateTimePicker();
             this.dtStart = new System.Windows.Forms.DateTimePicker();
             this.lblTaskDate = new System.Windows.Forms.Label();
@@ -49,22 +61,12 @@ namespace Personnel_Tracking_App
             this.rbStartDate = new System.Windows.Forms.RadioButton();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelForAdmin.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNew
@@ -101,6 +103,7 @@ namespace Personnel_Tracking_App
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClose
             // 
@@ -137,6 +140,7 @@ namespace Personnel_Tracking_App
             this.btnApprove.TabIndex = 13;
             this.btnApprove.Text = "Approve";
             this.btnApprove.UseVisualStyleBackColor = true;
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
             // panel1
             // 
@@ -159,149 +163,12 @@ namespace Personnel_Tracking_App
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dtFinish);
-            this.panel3.Controls.Add(this.dtStart);
-            this.panel3.Controls.Add(this.lblTaskDate);
-            this.panel3.Controls.Add(this.lblFinish);
-            this.panel3.Controls.Add(this.lblStart);
-            this.panel3.Controls.Add(this.cmbTaskState);
-            this.panel3.Controls.Add(this.lblTaskState);
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.btnClear);
-            this.panel3.Controls.Add(this.btnSearch);
+            this.panel3.Controls.Add(this.panelForAdmin);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(275, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(525, 194);
             this.panel3.TabIndex = 29;
-            // 
-            // dtFinish
-            // 
-            this.dtFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFinish.Location = new System.Drawing.Point(126, 88);
-            this.dtFinish.Name = "dtFinish";
-            this.dtFinish.Size = new System.Drawing.Size(238, 23);
-            this.dtFinish.TabIndex = 48;
-            // 
-            // dtStart
-            // 
-            this.dtStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtStart.Location = new System.Drawing.Point(126, 56);
-            this.dtStart.Name = "dtStart";
-            this.dtStart.Size = new System.Drawing.Size(238, 23);
-            this.dtStart.TabIndex = 47;
-            // 
-            // lblTaskDate
-            // 
-            this.lblTaskDate.AutoSize = true;
-            this.lblTaskDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTaskDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTaskDate.Location = new System.Drawing.Point(19, 25);
-            this.lblTaskDate.Name = "lblTaskDate";
-            this.lblTaskDate.Size = new System.Drawing.Size(86, 20);
-            this.lblTaskDate.TabIndex = 46;
-            this.lblTaskDate.Text = "TaskDate";
-            // 
-            // lblFinish
-            // 
-            this.lblFinish.AutoSize = true;
-            this.lblFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFinish.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblFinish.Location = new System.Drawing.Point(19, 88);
-            this.lblFinish.Name = "lblFinish";
-            this.lblFinish.Size = new System.Drawing.Size(57, 20);
-            this.lblFinish.TabIndex = 45;
-            this.lblFinish.Text = "Finish";
-            // 
-            // lblStart
-            // 
-            this.lblStart.AutoSize = true;
-            this.lblStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblStart.Location = new System.Drawing.Point(19, 56);
-            this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(49, 20);
-            this.lblStart.TabIndex = 44;
-            this.lblStart.Text = "Start";
-            // 
-            // cmbTaskState
-            // 
-            this.cmbTaskState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTaskState.FormattingEnabled = true;
-            this.cmbTaskState.Location = new System.Drawing.Point(129, 122);
-            this.cmbTaskState.Name = "cmbTaskState";
-            this.cmbTaskState.Size = new System.Drawing.Size(147, 28);
-            this.cmbTaskState.TabIndex = 43;
-           // this.cmbTaskState.SelectedIndexChanged += new System.EventHandler(this.cmbTaskState_SelectedIndexChanged);
-            // 
-            // lblTaskState
-            // 
-            this.lblTaskState.AutoSize = true;
-            this.lblTaskState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTaskState.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTaskState.Location = new System.Drawing.Point(19, 122);
-            this.lblTaskState.Name = "lblTaskState";
-            this.lblTaskState.Size = new System.Drawing.Size(96, 20);
-            this.lblTaskState.TabIndex = 42;
-            this.lblTaskState.Text = "Task State";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rbDeliveryDate);
-            this.groupBox2.Controls.Add(this.rbStartDate);
-            this.groupBox2.Location = new System.Drawing.Point(380, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(125, 100);
-            this.groupBox2.TabIndex = 41;
-            this.groupBox2.TabStop = false;
-            // 
-            // rbDeliveryDate
-            // 
-            this.rbDeliveryDate.AutoSize = true;
-            this.rbDeliveryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDeliveryDate.Location = new System.Drawing.Point(4, 54);
-            this.rbDeliveryDate.Name = "rbDeliveryDate";
-            this.rbDeliveryDate.Size = new System.Drawing.Size(124, 21);
-            this.rbDeliveryDate.TabIndex = 1;
-            this.rbDeliveryDate.TabStop = true;
-            this.rbDeliveryDate.Text = "Delivery Date";
-            this.rbDeliveryDate.UseVisualStyleBackColor = true;
-            // 
-            // rbStartDate
-            // 
-            this.rbStartDate.AutoSize = true;
-            this.rbStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbStartDate.Location = new System.Drawing.Point(6, 27);
-            this.rbStartDate.Name = "rbStartDate";
-            this.rbStartDate.Size = new System.Drawing.Size(100, 21);
-            this.rbStartDate.TabIndex = 0;
-            this.rbStartDate.TabStop = true;
-            this.rbStartDate.Text = "Start Date";
-            this.rbStartDate.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnClear.Location = new System.Drawing.Point(412, 137);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(93, 39);
-            this.btnClear.TabIndex = 39;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-           // this.btnClear.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSearch.Location = new System.Drawing.Point(311, 136);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(93, 39);
-            this.btnSearch.TabIndex = 40;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbPosition
             // 
@@ -311,7 +178,6 @@ namespace Personnel_Tracking_App
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(147, 28);
             this.cmbPosition.TabIndex = 28;
-//            this.cmbPosition.SelectedIndexChanged += new System.EventHandler(this.cmbPosition_SelectedIndexChanged);
             // 
             // cmbDepartment
             // 
@@ -413,6 +279,149 @@ namespace Personnel_Tracking_App
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
+            // panelForAdmin
+            // 
+            this.panelForAdmin.Controls.Add(this.dtFinish);
+            this.panelForAdmin.Controls.Add(this.dtStart);
+            this.panelForAdmin.Controls.Add(this.lblTaskDate);
+            this.panelForAdmin.Controls.Add(this.lblFinish);
+            this.panelForAdmin.Controls.Add(this.lblStart);
+            this.panelForAdmin.Controls.Add(this.cmbTaskState);
+            this.panelForAdmin.Controls.Add(this.lblTaskState);
+            this.panelForAdmin.Controls.Add(this.groupBox2);
+            this.panelForAdmin.Controls.Add(this.btnClear);
+            this.panelForAdmin.Controls.Add(this.btnSearch);
+            this.panelForAdmin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelForAdmin.Location = new System.Drawing.Point(0, 0);
+            this.panelForAdmin.Name = "panelForAdmin";
+            this.panelForAdmin.Size = new System.Drawing.Size(525, 194);
+            this.panelForAdmin.TabIndex = 0;
+            // 
+            // dtFinish
+            // 
+            this.dtFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFinish.Location = new System.Drawing.Point(126, 88);
+            this.dtFinish.Name = "dtFinish";
+            this.dtFinish.Size = new System.Drawing.Size(238, 23);
+            this.dtFinish.TabIndex = 58;
+            // 
+            // dtStart
+            // 
+            this.dtStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtStart.Location = new System.Drawing.Point(126, 56);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.Size = new System.Drawing.Size(238, 23);
+            this.dtStart.TabIndex = 57;
+            // 
+            // lblTaskDate
+            // 
+            this.lblTaskDate.AutoSize = true;
+            this.lblTaskDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTaskDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTaskDate.Location = new System.Drawing.Point(19, 25);
+            this.lblTaskDate.Name = "lblTaskDate";
+            this.lblTaskDate.Size = new System.Drawing.Size(86, 20);
+            this.lblTaskDate.TabIndex = 56;
+            this.lblTaskDate.Text = "TaskDate";
+            // 
+            // lblFinish
+            // 
+            this.lblFinish.AutoSize = true;
+            this.lblFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFinish.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblFinish.Location = new System.Drawing.Point(19, 88);
+            this.lblFinish.Name = "lblFinish";
+            this.lblFinish.Size = new System.Drawing.Size(57, 20);
+            this.lblFinish.TabIndex = 55;
+            this.lblFinish.Text = "Finish";
+            // 
+            // lblStart
+            // 
+            this.lblStart.AutoSize = true;
+            this.lblStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblStart.Location = new System.Drawing.Point(19, 56);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(49, 20);
+            this.lblStart.TabIndex = 54;
+            this.lblStart.Text = "Start";
+            // 
+            // cmbTaskState
+            // 
+            this.cmbTaskState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTaskState.FormattingEnabled = true;
+            this.cmbTaskState.Location = new System.Drawing.Point(129, 122);
+            this.cmbTaskState.Name = "cmbTaskState";
+            this.cmbTaskState.Size = new System.Drawing.Size(147, 28);
+            this.cmbTaskState.TabIndex = 53;
+            // 
+            // lblTaskState
+            // 
+            this.lblTaskState.AutoSize = true;
+            this.lblTaskState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTaskState.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTaskState.Location = new System.Drawing.Point(19, 122);
+            this.lblTaskState.Name = "lblTaskState";
+            this.lblTaskState.Size = new System.Drawing.Size(96, 20);
+            this.lblTaskState.TabIndex = 52;
+            this.lblTaskState.Text = "Task State";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbDeliveryDate);
+            this.groupBox2.Controls.Add(this.rbStartDate);
+            this.groupBox2.Location = new System.Drawing.Point(380, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(125, 100);
+            this.groupBox2.TabIndex = 51;
+            this.groupBox2.TabStop = false;
+            // 
+            // rbDeliveryDate
+            // 
+            this.rbDeliveryDate.AutoSize = true;
+            this.rbDeliveryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDeliveryDate.Location = new System.Drawing.Point(4, 54);
+            this.rbDeliveryDate.Name = "rbDeliveryDate";
+            this.rbDeliveryDate.Size = new System.Drawing.Size(124, 21);
+            this.rbDeliveryDate.TabIndex = 1;
+            this.rbDeliveryDate.TabStop = true;
+            this.rbDeliveryDate.Text = "Delivery Date";
+            this.rbDeliveryDate.UseVisualStyleBackColor = true;
+            // 
+            // rbStartDate
+            // 
+            this.rbStartDate.AutoSize = true;
+            this.rbStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbStartDate.Location = new System.Drawing.Point(6, 27);
+            this.rbStartDate.Name = "rbStartDate";
+            this.rbStartDate.Size = new System.Drawing.Size(100, 21);
+            this.rbStartDate.TabIndex = 0;
+            this.rbStartDate.TabStop = true;
+            this.rbStartDate.Text = "Start Date";
+            this.rbStartDate.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClear.Location = new System.Drawing.Point(412, 137);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(93, 39);
+            this.btnClear.TabIndex = 49;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSearch.Location = new System.Drawing.Point(311, 136);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(93, 39);
+            this.btnSearch.TabIndex = 50;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // FrmTaskList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,10 +437,11 @@ namespace Personnel_Tracking_App
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelForAdmin.ResumeLayout(false);
+            this.panelForAdmin.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,6 +466,7 @@ namespace Personnel_Tracking_App
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelForAdmin;
         private System.Windows.Forms.DateTimePicker dtFinish;
         private System.Windows.Forms.DateTimePicker dtStart;
         private System.Windows.Forms.Label lblTaskDate;

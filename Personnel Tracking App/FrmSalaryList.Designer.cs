@@ -38,6 +38,17 @@ namespace Personnel_Tracking_App
             this.btnApprove = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.txtUserNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelForAdmin = new System.Windows.Forms.Panel();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.lblYear = new System.Windows.Forms.Label();
@@ -50,20 +61,11 @@ namespace Personnel_Tracking_App
             this.rbMore = new System.Windows.Forms.RadioButton();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelForAdmin.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +75,7 @@ namespace Personnel_Tracking_App
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 194);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(825, 275);
             this.dataGridView1.TabIndex = 8;
@@ -112,6 +115,7 @@ namespace Personnel_Tracking_App
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClose
             // 
@@ -170,149 +174,12 @@ namespace Personnel_Tracking_App
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtSalary);
-            this.panel3.Controls.Add(this.txtYear);
-            this.panel3.Controls.Add(this.lblYear);
-            this.panel3.Controls.Add(this.lblSalary);
-            this.panel3.Controls.Add(this.lblMonth);
-            this.panel3.Controls.Add(this.cmbMonth);
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.btnClear);
-            this.panel3.Controls.Add(this.btnSearch);
+            this.panel3.Controls.Add(this.panelForAdmin);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(292, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(533, 194);
             this.panel3.TabIndex = 29;
-            // 
-            // txtSalary
-            // 
-            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtSalary.Location = new System.Drawing.Point(100, 84);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(147, 26);
-            this.txtSalary.TabIndex = 49;
-            // 
-            // txtYear
-            // 
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtYear.Location = new System.Drawing.Point(100, 12);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(147, 26);
-            this.txtYear.TabIndex = 48;
-            // 
-            // lblYear
-            // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblYear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblYear.Location = new System.Drawing.Point(10, 24);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(47, 20);
-            this.lblYear.TabIndex = 47;
-            this.lblYear.Text = "Year";
-            // 
-            // lblSalary
-            // 
-            this.lblSalary.AutoSize = true;
-            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSalary.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSalary.Location = new System.Drawing.Point(10, 87);
-            this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(59, 20);
-            this.lblSalary.TabIndex = 46;
-            this.lblSalary.Text = "Salary";
-            // 
-            // lblMonth
-            // 
-            this.lblMonth.AutoSize = true;
-            this.lblMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblMonth.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblMonth.Location = new System.Drawing.Point(10, 55);
-            this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(59, 20);
-            this.lblMonth.TabIndex = 45;
-            this.lblMonth.Text = "Month";
-            // 
-            // cmbMonth
-            // 
-            this.cmbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMonth.FormattingEnabled = true;
-            this.cmbMonth.Location = new System.Drawing.Point(100, 47);
-            this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(147, 28);
-            this.cmbMonth.TabIndex = 44;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rbEquals);
-            this.groupBox2.Controls.Add(this.rbLess);
-            this.groupBox2.Controls.Add(this.rbMore);
-            this.groupBox2.Location = new System.Drawing.Point(263, 47);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(184, 38);
-            this.groupBox2.TabIndex = 43;
-            this.groupBox2.TabStop = false;
-            // 
-            // rbEquals
-            // 
-            this.rbEquals.AutoSize = true;
-            this.rbEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEquals.Location = new System.Drawing.Point(115, 12);
-            this.rbEquals.Name = "rbEquals";
-            this.rbEquals.Size = new System.Drawing.Size(63, 17);
-            this.rbEquals.TabIndex = 2;
-            this.rbEquals.TabStop = true;
-            this.rbEquals.Text = "Equals";
-            this.rbEquals.UseVisualStyleBackColor = true;
-            // 
-            // rbLess
-            // 
-            this.rbLess.AutoSize = true;
-            this.rbLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLess.Location = new System.Drawing.Point(58, 12);
-            this.rbLess.Name = "rbLess";
-            this.rbLess.Size = new System.Drawing.Size(51, 17);
-            this.rbLess.TabIndex = 1;
-            this.rbLess.TabStop = true;
-            this.rbLess.Text = "Less";
-            this.rbLess.UseVisualStyleBackColor = true;
-            // 
-            // rbMore
-            // 
-            this.rbMore.AutoSize = true;
-            this.rbMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMore.Location = new System.Drawing.Point(6, 12);
-            this.rbMore.Name = "rbMore";
-            this.rbMore.Size = new System.Drawing.Size(53, 17);
-            this.rbMore.TabIndex = 0;
-            this.rbMore.TabStop = true;
-            this.rbMore.Text = "More";
-            this.rbMore.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnClear.Location = new System.Drawing.Point(364, 141);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(93, 39);
-            this.btnClear.TabIndex = 41;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSearch.Location = new System.Drawing.Point(265, 141);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(93, 39);
-            this.btnSearch.TabIndex = 42;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbPosition
             // 
@@ -322,7 +189,6 @@ namespace Personnel_Tracking_App
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(147, 28);
             this.cmbPosition.TabIndex = 28;
-            
             // 
             // cmbDepartment
             // 
@@ -413,6 +279,150 @@ namespace Personnel_Tracking_App
             this.label2.TabIndex = 19;
             this.label2.Text = "UserNo";
             // 
+            // panelForAdmin
+            // 
+            this.panelForAdmin.Controls.Add(this.txtSalary);
+            this.panelForAdmin.Controls.Add(this.txtYear);
+            this.panelForAdmin.Controls.Add(this.lblYear);
+            this.panelForAdmin.Controls.Add(this.lblSalary);
+            this.panelForAdmin.Controls.Add(this.lblMonth);
+            this.panelForAdmin.Controls.Add(this.cmbMonth);
+            this.panelForAdmin.Controls.Add(this.groupBox2);
+            this.panelForAdmin.Controls.Add(this.btnClear);
+            this.panelForAdmin.Controls.Add(this.btnSearch);
+            this.panelForAdmin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelForAdmin.Location = new System.Drawing.Point(0, 0);
+            this.panelForAdmin.Name = "panelForAdmin";
+            this.panelForAdmin.Size = new System.Drawing.Size(533, 194);
+            this.panelForAdmin.TabIndex = 0;
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSalary.Location = new System.Drawing.Point(133, 85);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(147, 26);
+            this.txtSalary.TabIndex = 58;
+            // 
+            // txtYear
+            // 
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtYear.Location = new System.Drawing.Point(133, 13);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(147, 26);
+            this.txtYear.TabIndex = 57;
+            // 
+            // lblYear
+            // 
+            this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblYear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblYear.Location = new System.Drawing.Point(43, 25);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(47, 20);
+            this.lblYear.TabIndex = 56;
+            this.lblYear.Text = "Year";
+            // 
+            // lblSalary
+            // 
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSalary.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblSalary.Location = new System.Drawing.Point(43, 88);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(59, 20);
+            this.lblSalary.TabIndex = 55;
+            this.lblSalary.Text = "Salary";
+            // 
+            // lblMonth
+            // 
+            this.lblMonth.AutoSize = true;
+            this.lblMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblMonth.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblMonth.Location = new System.Drawing.Point(43, 56);
+            this.lblMonth.Name = "lblMonth";
+            this.lblMonth.Size = new System.Drawing.Size(59, 20);
+            this.lblMonth.TabIndex = 54;
+            this.lblMonth.Text = "Month";
+            // 
+            // cmbMonth
+            // 
+            this.cmbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMonth.FormattingEnabled = true;
+            this.cmbMonth.Location = new System.Drawing.Point(133, 48);
+            this.cmbMonth.Name = "cmbMonth";
+            this.cmbMonth.Size = new System.Drawing.Size(147, 28);
+            this.cmbMonth.TabIndex = 53;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbEquals);
+            this.groupBox2.Controls.Add(this.rbLess);
+            this.groupBox2.Controls.Add(this.rbMore);
+            this.groupBox2.Location = new System.Drawing.Point(296, 48);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(184, 38);
+            this.groupBox2.TabIndex = 52;
+            this.groupBox2.TabStop = false;
+            // 
+            // rbEquals
+            // 
+            this.rbEquals.AutoSize = true;
+            this.rbEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEquals.Location = new System.Drawing.Point(115, 12);
+            this.rbEquals.Name = "rbEquals";
+            this.rbEquals.Size = new System.Drawing.Size(63, 17);
+            this.rbEquals.TabIndex = 2;
+            this.rbEquals.TabStop = true;
+            this.rbEquals.Text = "Equals";
+            this.rbEquals.UseVisualStyleBackColor = true;
+            // 
+            // rbLess
+            // 
+            this.rbLess.AutoSize = true;
+            this.rbLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLess.Location = new System.Drawing.Point(58, 12);
+            this.rbLess.Name = "rbLess";
+            this.rbLess.Size = new System.Drawing.Size(51, 17);
+            this.rbLess.TabIndex = 1;
+            this.rbLess.TabStop = true;
+            this.rbLess.Text = "Less";
+            this.rbLess.UseVisualStyleBackColor = true;
+            // 
+            // rbMore
+            // 
+            this.rbMore.AutoSize = true;
+            this.rbMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMore.Location = new System.Drawing.Point(6, 12);
+            this.rbMore.Name = "rbMore";
+            this.rbMore.Size = new System.Drawing.Size(53, 17);
+            this.rbMore.TabIndex = 0;
+            this.rbMore.TabStop = true;
+            this.rbMore.Text = "More";
+            this.rbMore.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClear.Location = new System.Drawing.Point(397, 142);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(93, 39);
+            this.btnClear.TabIndex = 50;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSearch.Location = new System.Drawing.Point(298, 142);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(93, 39);
+            this.btnSearch.TabIndex = 51;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // FrmSalaryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,7 +439,8 @@ namespace Personnel_Tracking_App
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelForAdmin.ResumeLayout(false);
+            this.panelForAdmin.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -456,6 +467,7 @@ namespace Personnel_Tracking_App
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelForAdmin;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.Label lblYear;

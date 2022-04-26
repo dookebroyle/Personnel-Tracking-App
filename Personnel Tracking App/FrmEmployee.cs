@@ -69,7 +69,6 @@ namespace Personnel_Tracking_App
             if (IsUpdate)
             {
                 txtName.Text = detail.Name;
-
                 txtSurname.Text = detail.Surname;
                 txtUserNo.Text = detail.UserNo.ToString();
                 txtPassword.Text = detail.Password;
@@ -83,6 +82,15 @@ namespace Personnel_Tracking_App
                     + "\\images\\" + detail.ImagePath;
                 txtImagePath.Text = imagepath;
                 pictureBox1.ImageLocation = imagepath;
+                if (!UserStatic.isAdmin)
+                {
+                    chkIsAdmin.Enabled = false;
+                    txtUserNo.Enabled = false;
+                    txtSalary.Enabled = false;
+                    cmbDepartment.Enabled = false;
+                    cmbPosition.Enabled = false;
+
+                }
             }
 
         }

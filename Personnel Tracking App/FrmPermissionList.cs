@@ -38,6 +38,8 @@ namespace Personnel_Tracking_App
         {
             if (detail.PermissionID == 0)
                 MessageBox.Show("please select a permission from table");
+            else if (detail.PermissionState == PermissionState.Approved || detail.PermissionState == PermissionState.Disapproved)
+                MessageBox.Show("You cannot update any approved or disapproved permission.");
 
             else
             {
@@ -63,6 +65,9 @@ namespace Personnel_Tracking_App
         void FillAllData()
         {
             dto = PermissionBLL.GetAll();
+            if (!UserStatic.isAdmin)
+                dto.Permissions = dto.Permissions.Where(x => x.EmployeeID == UserStatic.EmployeeID).ToList();
+
             dataGridView1.DataSource = dto.Permissions;
             combofull = false;
             cmbDepartment.DataSource = dto.Departments;
@@ -100,6 +105,13 @@ namespace Personnel_Tracking_App
             dataGridView1.Columns[13].Visible = false;
             dataGridView1.Columns[14].HeaderText = "Explanation";
             dataGridView1.Columns[15].Visible = false;
+            if(!UserStatic.isAdmin)
+            {
+                panelForAdmin.Visible = false;
+                btnApprove.Hide();
+                btnDisapprove.Hide();
+                btnDelete.Hide();
+            }
         }
         private void CleanFilters()
         {
@@ -216,6 +228,27 @@ namespace Personnel_Tracking_App
             MessageBox.Show("Disapproved");
             FillAllData();
             CleanFilters();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                if(detail.PermissionState == PermissionState.Approved || detail.PermissionState == PermissionState.Disapproved)
+                {
+                    MessageBox.Show("You can not delte approved or dissapproved permissions");
+
+                }
+                else
+                {
+                    PermissionBLL.DeletePermission(detail.PermissionID);
+                    MessageBox.Show("Permission has been deleted.");
+                    FillAllData();
+                    CleanFilters();
+
+                }
+            }
         }
     }
 }

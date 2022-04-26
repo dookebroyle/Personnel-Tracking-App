@@ -79,6 +79,10 @@ namespace Personnel_Tracking_App
         {
             dto = SalaryBLL.GetAll();
             if (!UserStatic.isAdmin)
+            {
+                dto.Salaries = dto.Salaries.Where(x => x.EmployeeID == UserStatic.EmployeeID).ToList();
+            }
+            if (!UserStatic.isAdmin)
                 dto.Salaries = dto.Salaries.Where(x => x.EmployeeID == UserStatic.EmployeeID).ToList();
             dataGridView1.DataSource = dto.Salaries;
             combofull = false;
@@ -118,6 +122,12 @@ namespace Personnel_Tracking_App
             dataGridView1.Columns[12].HeaderText = "Salary";
             //  dataGridView1.Columns[13].Visible = false;
             dataGridView1.Columns[14].HeaderText = "Old Salary";
+            if (!UserStatic.isAdmin)
+            {
+                btnUpdate.Hide();
+                btnDelete.Hide();
+                panelForAdmin.Hide();
+            }
 
 
         }
@@ -202,6 +212,18 @@ namespace Personnel_Tracking_App
             detail.SalaryYear = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
 
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                SalaryBLL.DeleteSalary(detail.SalaryID);
+                MessageBox.Show("Salary has been deleted.");
+                FillAllData();
+                CleanFilters();
+            }
         }
     }
 }

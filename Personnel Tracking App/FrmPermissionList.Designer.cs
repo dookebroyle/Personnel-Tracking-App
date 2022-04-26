@@ -30,20 +30,6 @@ namespace Personnel_Tracking_App
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cmbPermissionState = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDayAmount = new System.Windows.Forms.TextBox();
-            this.dtEndDate = new System.Windows.Forms.DateTimePicker();
-            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
-            this.lblPermissionDate = new System.Windows.Forms.Label();
-            this.lblFinish = new System.Windows.Forms.Label();
-            this.lblStart = new System.Windows.Forms.Label();
-            this.lblDayAmount = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbEndDate = new System.Windows.Forms.RadioButton();
-            this.rbStartDate = new System.Windows.Forms.RadioButton();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -63,179 +49,37 @@ namespace Personnel_Tracking_App
             this.lblSurname = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelForAdmin = new System.Windows.Forms.Panel();
+            this.cmbPermissionState = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDayAmount = new System.Windows.Forms.TextBox();
+            this.dtEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
+            this.lblPermissionDate = new System.Windows.Forms.Label();
+            this.lblFinish = new System.Windows.Forms.Label();
+            this.lblStart = new System.Windows.Forms.Label();
+            this.lblDayAmount = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbEndDate = new System.Windows.Forms.RadioButton();
+            this.rbStartDate = new System.Windows.Forms.RadioButton();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panelForAdmin.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.cmbPermissionState);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txtDayAmount);
-            this.panel3.Controls.Add(this.dtEndDate);
-            this.panel3.Controls.Add(this.dtStartDate);
-            this.panel3.Controls.Add(this.lblPermissionDate);
-            this.panel3.Controls.Add(this.lblFinish);
-            this.panel3.Controls.Add(this.lblStart);
-            this.panel3.Controls.Add(this.lblDayAmount);
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.btnClear);
-            this.panel3.Controls.Add(this.btnSearch);
+            this.panel3.Controls.Add(this.panelForAdmin);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(302, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(510, 194);
             this.panel3.TabIndex = 29;
-            // 
-            // cmbPermissionState
-            // 
-            this.cmbPermissionState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPermissionState.FormattingEnabled = true;
-            this.cmbPermissionState.Location = new System.Drawing.Point(119, 146);
-            this.cmbPermissionState.Name = "cmbPermissionState";
-            this.cmbPermissionState.Size = new System.Drawing.Size(147, 28);
-            this.cmbPermissionState.TabIndex = 51;
-            this.cmbPermissionState.SelectedIndexChanged += new System.EventHandler(this.cmbPermissionState_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(15, 154);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "State ";
-            // 
-            // txtDayAmount
-            // 
-            this.txtDayAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtDayAmount.Location = new System.Drawing.Point(119, 113);
-            this.txtDayAmount.Name = "txtDayAmount";
-            this.txtDayAmount.Size = new System.Drawing.Size(147, 26);
-            this.txtDayAmount.TabIndex = 49;
-            // 
-            // dtEndDate
-            // 
-            this.dtEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtEndDate.Location = new System.Drawing.Point(119, 82);
-            this.dtEndDate.Name = "dtEndDate";
-            this.dtEndDate.Size = new System.Drawing.Size(238, 23);
-            this.dtEndDate.TabIndex = 48;
-            // 
-            // dtStartDate
-            // 
-            this.dtStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtStartDate.Location = new System.Drawing.Point(119, 52);
-            this.dtStartDate.Name = "dtStartDate";
-            this.dtStartDate.Size = new System.Drawing.Size(238, 23);
-            this.dtStartDate.TabIndex = 47;
-            // 
-            // lblPermissionDate
-            // 
-            this.lblPermissionDate.AutoSize = true;
-            this.lblPermissionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPermissionDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPermissionDate.Location = new System.Drawing.Point(84, 9);
-            this.lblPermissionDate.Name = "lblPermissionDate";
-            this.lblPermissionDate.Size = new System.Drawing.Size(140, 20);
-            this.lblPermissionDate.TabIndex = 46;
-            this.lblPermissionDate.Text = "Permission Date";
-            // 
-            // lblFinish
-            // 
-            this.lblFinish.AutoSize = true;
-            this.lblFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFinish.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblFinish.Location = new System.Drawing.Point(6, 91);
-            this.lblFinish.Name = "lblFinish";
-            this.lblFinish.Size = new System.Drawing.Size(57, 20);
-            this.lblFinish.TabIndex = 45;
-            this.lblFinish.Text = "Finish";
-            // 
-            // lblStart
-            // 
-            this.lblStart.AutoSize = true;
-            this.lblStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblStart.Location = new System.Drawing.Point(6, 59);
-            this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(49, 20);
-            this.lblStart.TabIndex = 44;
-            this.lblStart.Text = "Start";
-            // 
-            // lblDayAmount
-            // 
-            this.lblDayAmount.AutoSize = true;
-            this.lblDayAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDayAmount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDayAmount.Location = new System.Drawing.Point(6, 120);
-            this.lblDayAmount.Name = "lblDayAmount";
-            this.lblDayAmount.Size = new System.Drawing.Size(107, 20);
-            this.lblDayAmount.TabIndex = 42;
-            this.lblDayAmount.Text = "Day Amount";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rbEndDate);
-            this.groupBox2.Controls.Add(this.rbStartDate);
-            this.groupBox2.Location = new System.Drawing.Point(375, 52);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(113, 59);
-            this.groupBox2.TabIndex = 41;
-            this.groupBox2.TabStop = false;
-            // 
-            // rbEndDate
-            // 
-            this.rbEndDate.AutoSize = true;
-            this.rbEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEndDate.Location = new System.Drawing.Point(6, 34);
-            this.rbEndDate.Name = "rbEndDate";
-            this.rbEndDate.Size = new System.Drawing.Size(93, 21);
-            this.rbEndDate.TabIndex = 1;
-            this.rbEndDate.TabStop = true;
-            this.rbEndDate.Text = "End Date";
-            this.rbEndDate.UseVisualStyleBackColor = true;
-            // 
-            // rbStartDate
-            // 
-            this.rbStartDate.AutoSize = true;
-            this.rbStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbStartDate.Location = new System.Drawing.Point(6, 7);
-            this.rbStartDate.Name = "rbStartDate";
-            this.rbStartDate.Size = new System.Drawing.Size(100, 21);
-            this.rbStartDate.TabIndex = 0;
-            this.rbStartDate.TabStop = true;
-            this.rbStartDate.Text = "Start Date";
-            this.rbStartDate.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnClear.Location = new System.Drawing.Point(405, 137);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(93, 39);
-            this.btnClear.TabIndex = 39;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSearch.Location = new System.Drawing.Point(304, 136);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(93, 39);
-            this.btnSearch.TabIndex = 40;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnNew
             // 
@@ -271,6 +115,7 @@ namespace Personnel_Tracking_App
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClose
             // 
@@ -450,6 +295,170 @@ namespace Personnel_Tracking_App
             this.label2.TabIndex = 19;
             this.label2.Text = "UserNo";
             // 
+            // panelForAdmin
+            // 
+            this.panelForAdmin.Controls.Add(this.cmbPermissionState);
+            this.panelForAdmin.Controls.Add(this.label3);
+            this.panelForAdmin.Controls.Add(this.txtDayAmount);
+            this.panelForAdmin.Controls.Add(this.dtEndDate);
+            this.panelForAdmin.Controls.Add(this.dtStartDate);
+            this.panelForAdmin.Controls.Add(this.lblPermissionDate);
+            this.panelForAdmin.Controls.Add(this.lblFinish);
+            this.panelForAdmin.Controls.Add(this.lblStart);
+            this.panelForAdmin.Controls.Add(this.lblDayAmount);
+            this.panelForAdmin.Controls.Add(this.groupBox2);
+            this.panelForAdmin.Controls.Add(this.btnClear);
+            this.panelForAdmin.Controls.Add(this.btnSearch);
+            this.panelForAdmin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelForAdmin.Location = new System.Drawing.Point(3, 0);
+            this.panelForAdmin.Name = "panelForAdmin";
+            this.panelForAdmin.Size = new System.Drawing.Size(507, 194);
+            this.panelForAdmin.TabIndex = 0;
+            // 
+            // cmbPermissionState
+            // 
+            this.cmbPermissionState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPermissionState.FormattingEnabled = true;
+            this.cmbPermissionState.Location = new System.Drawing.Point(120, 151);
+            this.cmbPermissionState.Name = "cmbPermissionState";
+            this.cmbPermissionState.Size = new System.Drawing.Size(147, 28);
+            this.cmbPermissionState.TabIndex = 63;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(16, 159);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 62;
+            this.label3.Text = "State ";
+            // 
+            // txtDayAmount
+            // 
+            this.txtDayAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtDayAmount.Location = new System.Drawing.Point(120, 118);
+            this.txtDayAmount.Name = "txtDayAmount";
+            this.txtDayAmount.Size = new System.Drawing.Size(147, 26);
+            this.txtDayAmount.TabIndex = 61;
+            // 
+            // dtEndDate
+            // 
+            this.dtEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEndDate.Location = new System.Drawing.Point(120, 87);
+            this.dtEndDate.Name = "dtEndDate";
+            this.dtEndDate.Size = new System.Drawing.Size(238, 23);
+            this.dtEndDate.TabIndex = 60;
+            // 
+            // dtStartDate
+            // 
+            this.dtStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtStartDate.Location = new System.Drawing.Point(120, 57);
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.Size = new System.Drawing.Size(238, 23);
+            this.dtStartDate.TabIndex = 59;
+            // 
+            // lblPermissionDate
+            // 
+            this.lblPermissionDate.AutoSize = true;
+            this.lblPermissionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPermissionDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblPermissionDate.Location = new System.Drawing.Point(85, 14);
+            this.lblPermissionDate.Name = "lblPermissionDate";
+            this.lblPermissionDate.Size = new System.Drawing.Size(140, 20);
+            this.lblPermissionDate.TabIndex = 58;
+            this.lblPermissionDate.Text = "Permission Date";
+            // 
+            // lblFinish
+            // 
+            this.lblFinish.AutoSize = true;
+            this.lblFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFinish.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblFinish.Location = new System.Drawing.Point(7, 96);
+            this.lblFinish.Name = "lblFinish";
+            this.lblFinish.Size = new System.Drawing.Size(57, 20);
+            this.lblFinish.TabIndex = 57;
+            this.lblFinish.Text = "Finish";
+            // 
+            // lblStart
+            // 
+            this.lblStart.AutoSize = true;
+            this.lblStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblStart.Location = new System.Drawing.Point(7, 64);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(49, 20);
+            this.lblStart.TabIndex = 56;
+            this.lblStart.Text = "Start";
+            // 
+            // lblDayAmount
+            // 
+            this.lblDayAmount.AutoSize = true;
+            this.lblDayAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDayAmount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblDayAmount.Location = new System.Drawing.Point(7, 125);
+            this.lblDayAmount.Name = "lblDayAmount";
+            this.lblDayAmount.Size = new System.Drawing.Size(107, 20);
+            this.lblDayAmount.TabIndex = 55;
+            this.lblDayAmount.Text = "Day Amount";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbEndDate);
+            this.groupBox2.Controls.Add(this.rbStartDate);
+            this.groupBox2.Location = new System.Drawing.Point(376, 57);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(113, 59);
+            this.groupBox2.TabIndex = 54;
+            this.groupBox2.TabStop = false;
+            // 
+            // rbEndDate
+            // 
+            this.rbEndDate.AutoSize = true;
+            this.rbEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEndDate.Location = new System.Drawing.Point(6, 34);
+            this.rbEndDate.Name = "rbEndDate";
+            this.rbEndDate.Size = new System.Drawing.Size(93, 21);
+            this.rbEndDate.TabIndex = 1;
+            this.rbEndDate.TabStop = true;
+            this.rbEndDate.Text = "End Date";
+            this.rbEndDate.UseVisualStyleBackColor = true;
+            // 
+            // rbStartDate
+            // 
+            this.rbStartDate.AutoSize = true;
+            this.rbStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbStartDate.Location = new System.Drawing.Point(6, 7);
+            this.rbStartDate.Name = "rbStartDate";
+            this.rbStartDate.Size = new System.Drawing.Size(100, 21);
+            this.rbStartDate.TabIndex = 0;
+            this.rbStartDate.TabStop = true;
+            this.rbStartDate.Text = "Start Date";
+            this.rbStartDate.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClear.Location = new System.Drawing.Point(406, 142);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(93, 39);
+            this.btnClear.TabIndex = 52;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSearch.Location = new System.Drawing.Point(305, 141);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(93, 39);
+            this.btnSearch.TabIndex = 53;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // FrmPermissionList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,13 +471,14 @@ namespace Personnel_Tracking_App
             this.Text = "Permission List";
             this.Load += new System.EventHandler(this.FrmPermissionList_Load);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelForAdmin.ResumeLayout(false);
+            this.panelForAdmin.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -494,6 +504,10 @@ namespace Personnel_Tracking_App
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelForAdmin;
+        private System.Windows.Forms.ComboBox cmbPermissionState;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtDayAmount;
         private System.Windows.Forms.DateTimePicker dtEndDate;
         private System.Windows.Forms.DateTimePicker dtStartDate;
         private System.Windows.Forms.Label lblPermissionDate;
@@ -505,8 +519,5 @@ namespace Personnel_Tracking_App
         private System.Windows.Forms.RadioButton rbStartDate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtDayAmount;
-        private System.Windows.Forms.ComboBox cmbPermissionState;
-        private System.Windows.Forms.Label label3;
     }
 }
